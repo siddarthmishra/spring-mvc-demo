@@ -12,13 +12,18 @@
 </head>
 <body>
 
-	<%-- <form action="processForm" method="GET">
-		<input type="text" name="studentName" placeholder="What's your name?">
-		<input type="submit" value="Submit">
-	</form> --%>
+	 <%-- <form action="processForm" method="GET">
+		processForm : <input id="studentName" type="text" name="studentName" placeholder="What's your name?" onblur="checkSubmitButton()">
+		<input id="submitForm" type="submit" value="Submit" disabled="disabled">
+	</form>
+	<br>
 	<form action="processFormVersionTwo" method="GET">
-		<input id="studentName" type="text" name="studentName" placeholder="What's your name?" onblur="checkSubmitButton()">
-		<br>
+		processFormVersionTwo : <input id="studentName" type="text" name="studentName" placeholder="What's your name?" onblur="checkSubmitButton()">
+		<input id="submitForm" type="submit" value="Submit" disabled="disabled">
+	</form> --%>
+	<br>
+	<form action="processFormVersionThree" method="GET">
+		processFormVersionThree : <input id="studentName" type="text" name="studentName" placeholder="What's your name?" onblur="checkSubmitButton()">
 		<input id="submitForm" type="submit" value="Submit" disabled="disabled">
 	</form>
 	<br><br>

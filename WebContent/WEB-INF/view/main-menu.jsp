@@ -11,7 +11,7 @@
 	<body>
 		<img src="${pageContext.request.contextPath}/resources/images/spring-logo.png" height="200"/>
 		<h1>Spring MVC Demo - Home Page</h1>
-		<a href="showForm">Show Form</a>
+		<a href="hello/showForm">Show Form</a>
 		<br><br>
 		<input type="button" onclick="doSomeWork()" value="Click Me"/>
 	</body>
