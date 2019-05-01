@@ -15,6 +15,12 @@
 	<br><br>
 	countryPropertiesResult : ${student.countryPropertiesResult}
 	<br><br>
+	Favorite Language : ${student.favoriteLanguage}
+	<br><br>
+	favoriteLanguageOptionsResult : ${student.favoriteLanguageOptionsResult}
+	<br><br>
+	favoriteLanguagePropertiesResult : ${student.favoriteLanguagePropertiesResult}
+	<br><br>
 	<a href="${pageContext.request.contextPath}/">Home</a>
 </body>
 </html>
