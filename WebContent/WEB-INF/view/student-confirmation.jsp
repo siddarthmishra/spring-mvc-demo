@@ -9,6 +9,12 @@
 <body>
 	Student is Confirmed : ${student.firstName} ${student.lastName}
 	<br><br>
+	Country : ${student.country}
+	<br><br>
+	countryOptionsResult : ${student.countryOptionsResult}
+	<br><br>
+	countryPropertiesResult : ${student.countryPropertiesResult}
+	<br><br>
 	<a href="${pageContext.request.contextPath}/">Home</a>
 </body>
 </html>
