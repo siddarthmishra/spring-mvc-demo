@@ -44,7 +44,7 @@ public class HelloWorldController {
 
 	// need a new controller to read form data add data to the model object
 	@RequestMapping("/processFormVersionThree")
-	public String processFormVersionThree( String name, Model model) {
+	public String processFormVersionThree(@RequestParam("studentName") String name, Model model) {
 
 		// convert the data to all CAPS
 		name = name.toUpperCase();
@@ -54,6 +54,21 @@ public class HelloWorldController {
 
 		// add mssage to the model
 		model.addAttribute("message", name);
+
+		return "helloworld";
+	}
+	
+	@RequestMapping("processFormVersionThreeA")//Removed forward slash. Either way works fine
+	public String processFormVersionThreeA(String studentName, Model model) { //directly using HTML form field name instead of @RequestParam
+
+		// convert the data to all CAPS
+		studentName = studentName.toUpperCase();
+
+		// create message
+		studentName = "processFormVersionThree! " + studentName;
+
+		// add mssage to the model
+		model.addAttribute("message", studentName);
 
 		return "helloworld";
 	}

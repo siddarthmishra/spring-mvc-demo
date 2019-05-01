@@ -14,5 +14,6 @@
 <form action="/spring-mvc-demo/">
 	<input type="submit" value="Home">
 </form>
+<a href="${pageContext.request.contextPath}/">Home</a>
 </body>
 </html>
