@@ -41,6 +41,15 @@
 		<br><br>
 		Favorite Language : <form:radiobuttons path="favoriteLanguagePropertiesResult" items="${theFavoriteLanguageOptions}"/>
 		<br><br>
+		Operating Systems :
+			Linux<form:checkbox path="operatingSystems" value="Linux"/> &nbsp;&nbsp;
+			Mac OS<form:checkbox path="operatingSystems" value="Mac OS"/> &nbsp;&nbsp;
+			MS Windows<form:checkbox path="operatingSystems" value="MS Windows"/> &nbsp;&nbsp;
+		<br><br>
+		Operating Systems from Java : <form:checkboxes items="${student.operatingSystemsOptions}" path="operatingSystems"/>
+		<br><br>
+		Operating Systems from Java : <form:checkboxes items="${theOperatingSystemsOptions}" path="operatingSystems"/>
+		<br><br>
 		<input type="submit" value="Submit">
 		
 	</form:form>

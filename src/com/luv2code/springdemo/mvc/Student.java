@@ -1,6 +1,8 @@
 package com.luv2code.springdemo.mvc;
 
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class Student {
@@ -15,6 +17,8 @@ public class Student {
 	private Map<String, String> favoriteLanguageOptions;
 	private String favoriteLanguageOptionsResult;
 	private String favoriteLanguagePropertiesResult;
+	private Set<String> operatingSystems = new HashSet<String>();
+	private Map<String, String> operatingSystemsOptions;
 
 	public Student() {
 		// this.firstName = "firstName";
@@ -23,6 +27,8 @@ public class Student {
 		populateCountryOptions();
 		// this.favoriteLanguage = ""; // default to None
 		populateFavoriteLanguageOptions();
+		// operatingSystems.add("MS Windows"); // default to MS Windows
+		populateOperatingSystemsOptions();
 	}
 
 	@Override
@@ -31,7 +37,8 @@ public class Student {
 				+ ", countryOptionsResult=" + countryOptionsResult + ", countryPropertiesResult="
 				+ countryPropertiesResult + ", favoriteLanguage=" + favoriteLanguage
 				+ ", favoriteLanguageOptionsResult=" + favoriteLanguageOptionsResult
-				+ ", favoriteLanguagePropertiesResult=" + favoriteLanguagePropertiesResult + "]";
+				+ ", favoriteLanguagePropertiesResult=" + favoriteLanguagePropertiesResult + ", operatingSystems="
+				+ operatingSystems + "]";
 	}
 
 	private void populateCountryOptions() {
@@ -49,6 +56,13 @@ public class Student {
 		favoriteLanguageOptions.put("ML", "Machine Leanring");
 		favoriteLanguageOptions.put("RPA", "Robotic Process Automation");
 		favoriteLanguageOptions.put("AI", "Artificial Intelligence");
+	}
+
+	private void populateOperatingSystemsOptions() {
+		this.operatingSystemsOptions = new TreeMap<String, String>();
+		operatingSystemsOptions.put("OS1", "Operating Systems 1");
+		operatingSystemsOptions.put("OS2", "Operating Systems 2");
+		operatingSystemsOptions.put("OS3", "Operating Systems 3");
 	}
 
 	public String getFirstName() {
@@ -121,6 +135,18 @@ public class Student {
 
 	public void setFavoriteLanguagePropertiesResult(String favoriteLanguagePropertiesResult) {
 		this.favoriteLanguagePropertiesResult = favoriteLanguagePropertiesResult;
+	}
+
+	public Set<String> getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(Set<String> operatingSystems) {
+		this.operatingSystems = operatingSystems;
+	}
+
+	public Map<String, String> getOperatingSystemsOptions() {
+		return operatingSystemsOptions;
 	}
 
 }

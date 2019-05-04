@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +21,13 @@
 	favoriteLanguageOptionsResult : ${student.favoriteLanguageOptionsResult}
 	<br><br>
 	favoriteLanguagePropertiesResult : ${student.favoriteLanguagePropertiesResult}
+	<br><br>
+	Operating Systems : <%-- ${student.operatingSystems} --%>
+	<c:forEach items="${student.operatingSystems}" var="temp" >
+		<ul>
+			<li>${temp}</li>
+		</ul>
+	</c:forEach>
 	<br><br>
 	<a href="${pageContext.request.contextPath}/">Home</a>
 </body>
