@@ -7,7 +7,7 @@
 <title>Hello World - Input Form</title>
 
 <%-- Support for jQuery --%>
-<script src="${pageContext.request.contextPath}/resources/js/jquery-3.4.0.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/simple-test.js"></script>
 </head>
 <body>
