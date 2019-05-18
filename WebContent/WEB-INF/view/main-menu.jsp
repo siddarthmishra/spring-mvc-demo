@@ -15,6 +15,8 @@
 		<br><br>
 		<a href="student/showForm">Show Student Form</a>
 		<br><br>
+		<a href="customer/showForm">Show Customer Form</a>
+		<br><br>
 		<input type="button" onclick="doSomeWork()" value="Click Me"/>
 	</body>
 </html>
