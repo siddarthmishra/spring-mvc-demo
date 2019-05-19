@@ -15,12 +15,19 @@
 </style>
 </head>
 <body>
+
+	<br>
 	<form:form action="processForm" modelAttribute="customer">
+		<div class="error">${customer.errorMessage}</div>
+		<br>
 	 	First Name : <form:input path="firstName" />
 		<br>
 		<br>
-	 	Last Name (*) : <form:input path="lastName" />
+		Last Name (*) : <form:input path="lastName" />
 		<form:errors path="lastName" cssClass="error" />
+		<br>
+		<br>
+		Email (*) : <form:input path="email" />
 		<br>
 		<br>
 		<input type="submit" value="Submit" />

@@ -9,6 +9,8 @@
 <body>
 	The Customer is Confirmed : ${customer.firstName} ${customer.lastName}
 	<br>
+	Email : ${customer.email}
+	<br>
 
 	<br>
 	<a href="${pageContext.request.contextPath}/">Home</a>
