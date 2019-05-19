@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ page
+	import="java.util.*, org.springframework.web.servlet.support.RequestContext, org.springframework.validation.Errors, org.springframework.validation.ObjectError, org.springframework.validation.FieldError"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,5 +36,34 @@
 	</form:form>
 	<br>
 	<a href="${pageContext.request.contextPath}/">Home</a>
+	<hr>
+
+	Viewing raw validation errors data
+
+	<p>
+
+		<%
+			RequestContext requestContext = (RequestContext) pageContext
+					.getAttribute("org.springframework.web.servlet.tags.REQUEST_CONTEXT");
+
+			Errors theErrors = requestContext.getErrors("customer");
+
+			List<FieldError> fieldErrors = theErrors.getFieldErrors();
+
+			out.println("hasFieldErrors=" + !fieldErrors.isEmpty() + "<br><br>");
+
+			for (FieldError temp : fieldErrors) {
+				out.println("field=" + temp.getField() + "<br>");
+				out.println("rejected value=" + temp.getRejectedValue() + "<br>");
+				out.println("default message=" + temp.getDefaultMessage() + "<br>");
+
+				out.println("<br>");
+				out.println("Full dump: " + temp);
+				out.println("<br>");
+			}
+		%>
+
+	</p>
+	<br>
 </body>
 </html>
