@@ -11,6 +11,10 @@
 	<br>
 	Email : ${customer.email}
 	<br>
+	Free Passes : ${customer.freePasses}
+	<br>
+	Postal Code : ${customer.postalCode}
+	<br>
 
 	<br>
 	<a href="${pageContext.request.contextPath}/">Home</a>

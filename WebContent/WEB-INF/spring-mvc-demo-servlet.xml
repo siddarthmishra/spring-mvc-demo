@@ -31,4 +31,10 @@
 	<util:properties id="favoriteLanguageID" location="classpath:../favoriteLanguage.properties" />
 	<util:properties id="operatingSystemsID" location="classpath:../operatingSystems.properties" />
 
+	<!-- Load custom message resource -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<!-- where to find the file -->
+		<property name="basenames" value="resources/messages" />
+	</bean>
+
 </beans>
