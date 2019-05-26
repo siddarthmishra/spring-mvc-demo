@@ -15,6 +15,8 @@
 	<br>
 	Postal Code : ${customer.postalCode}
 	<br>
+	Course Code : ${customer.courseCode}
+	<br>
 
 	<br>
 	<a href="${pageContext.request.contextPath}/">Home</a>
